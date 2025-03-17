@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device-based Redirect</title>
+    <script type="text/javascript">
+        function redirectBasedOnDevice() {
+            var userAgent = navigator.userAgent;
+            // Check if it's a mobile device
+            if (/Mobi|Android/i.test(userAgent)) {
+                window.location.href = "https://google.com"; // Mobile site
+            } else {
+                window.location.href = "https://www.fb.com"; // Desktop site
+            }
+        }
+    </script>
+</head>
+<body onload="redirectBasedOnDevice()">
+    <h1>Redirecting based on your device...</h1>
+</body>
+</html>
